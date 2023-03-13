@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>new Post</title>
+</head>
+
+<body>
+<form action="#"  th:action="@{/save}" th:object="${post}" method="post">
+    <pre>
+    <div align="center">
+        Title :<input name="title" type="text" placeholder="title">
+
+
+        <h3>create body :</h3><textarea name="body" rows="10" cols="20"></textarea>
+
+    <input id="date" type="hidden" >
+        <label for="date"/>
+
+
+   <input type="submit" value="post">
+
+    </div>
+    </pre>
+
+
+</form>
+
+</body>
+</html>

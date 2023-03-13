@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>post</title>
+</head>
+<body>
+
+        <div align="center" th:each="post : ${posts}">
+
+            <h2 th:text="${post.title}"/>
+            <h2 th:text="${post.body}"/>
+            <h4 th:text="${post.date}"/>
+            <h4><a href="postcoment" </h4>
+            <hr/>
+            <h5>Be sure to leave nice comments</h5>
+        </div>
+        <form action="#" th:action="@{/save}" th:object="${post}" method="post">
+            <input type="text" name="comments" value="Comment" placeholder="Comment">
+            <input type="submit" value="comment">
+        </form>
+
+<!--    <div align="center" th:each="post : ${posts}">-->
+
+<!--        <h2 th:text="${post.comments}"/>-->
+<!--    </div>-->
+</body>
+</html>
